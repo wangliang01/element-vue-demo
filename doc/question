@@ -1,0 +1,36 @@
+1.[Vue warn]: Failed to mount component: template or render function not defined.
+
+found in
+
+---> <Anonymous>
+       <App> at src/App.vue
+         <Root>
+
+以前引用组件的方式是  const HelloWorld = import('@/components/HelloWorld')
+
+现在要这样引用: const HelloWorld = require('@/components/HelloWorld').default
+
+2.页面在利用element-ui进行布局时，实现css上中下布局，高度不足时，footer固定在底部，如出现滚动条（高度比较大了），footer和body部分一并向下滚动.
+<template>
+<el-container class="layout-container">
+  <el-header>Header</el-header>
+  <el-container>
+    <el-aside width="200px">Aside</el-aside>
+    <el-main>Main</el-main>
+  </el-container>
+  <el-footer>
+    Copyright © 2014 -2016 粤 ICP 备 14052360 号
+  </el-footer>
+</el-container>
+</template>
+
+css部分：
+
+html, body, #app{
+  height: 100%;
+}
+
+.layout-container{
+  height: auto;
+  min-height: 100%;
+}
