@@ -1,17 +1,55 @@
 
 @import "./variable.less";
-.el-header{
-  background-color: @primary;
-}
 
 .el-aside{
-  background-color: @info;
+  background-color: rgb(48, 65, 86);
 }
-
 .el-main{
-  background-color: #f5f5f5;
+  padding: 0;
 }
 
-.el-footer{
-  background-color: @primary;
+.el-menu-item, .el-submenu{
+  height: 42px;
+  line-height: 42px;
+  span{
+    font-size: 10px;
+  }
 }
+.el-menu-item{
+  &:hover{
+    background-color: rgb(38, 52, 69) !important;
+  }
+}
+.el-submenu .el-submenu__title{
+  line-height: 42px;
+  &:hover{
+    background-color: rgb(38, 52, 69) !important;
+  }
+}
+
+.el-color-picker {
+  display: inline-block;
+  position: relative;
+  margin-right: 16px;
+  top: -5px;
+  line-height: normal;
+  height: auto;
+}
+
+.el-color-picker__trigger {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 20px;
+  width: 20px;
+  padding: 0;
+  border-width: 0;
+  outline: none;
+  border-radius: 4px;
+  font-size: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+
+

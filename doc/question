@@ -34,3 +34,8 @@ html, body, #app{
   height: auto;
   min-height: 100%;
 }
+
+3.在使用elementui导航菜单组件时，当点击某个菜单项时，整个大的菜单项都会展开或者折叠，不能一级一级地折叠,
+要为每一个el-submenu和el-menu-item 添加index属性
+
+4.如何改变element-ui导航菜单的hover颜色
