@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="dashboard-container">
-
+        <router-view class="router-view"></router-view>
       </div>
     </el-main>
   </el-container>
@@ -223,6 +223,7 @@ export default {
   }
   .el-main {
     padding: 0;
+    overflow: hidden;
   }
   .navbar {
     padding: 0 10px;
@@ -286,6 +287,41 @@ export default {
         font-size: 0;
         position: relative;
         cursor: pointer;
+      }
+    }
+  }
+  .dashboard-container{
+    height: 100%;
+    .router-view{
+      overflow-y: hidden;
+    }
+    .title{
+      width: 272px;
+      padding: 10px 16px 0px 60px;
+      line-height: 25px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+      box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.04) inset;
+    }
+    .todo-item{
+      position: relative;
+      padding: 15px 15px 15px 50px;
+      width: 272px;
+      line-height: 14px;
+
+      .circle{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -20px;
+        padding: 4px;
+        width: 31px;
+        height: 31px;
+        border: 1px solid #999;
+        border-radius: 50%;
+      }
+      .text{
+        font-size: 14px;
+        font-weight: 700;
       }
     }
   }
